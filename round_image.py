@@ -10,7 +10,7 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     uploaded_img = Image.open(uploaded_image)
     
     # Resize the uploaded image
-    uploaded_img = uploaded_img.resize((450, 475))  # Change dimensions as needed
+    uploaded_img = uploaded_img.resize((460, 465))  # Change dimensions as needed
     
     # Create a round mask
     mask = Image.new("L", uploaded_img.size, 0)
@@ -21,7 +21,7 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     uploaded_img.putalpha(mask)
     
     # Calculate the position to place the uploaded image
-    position = (1107, 5)  # Change position as needed
+    position = (1100, 5)  # Change position as needed
     
     # Paste the uploaded image onto the certificate image
     certificate_img.paste(uploaded_img, position, uploaded_img)
@@ -32,18 +32,18 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     # Custom font style and font size for text
     font = ImageFont.truetype('arial.ttf', 40)
     
-    text_position = (1200, 465)
+    # text_position = (1200, 465)
 
     # Calculate the position to place the text
-    # if len(text) <= 5:
-    #     text_position = (1250, 450)
-    # elif len(text) <= 10:
-    #     text_position = (1200, 450)
-    # elif len(text) >= 15:
-    #     text_position = (1120, 450)
-    # else:
-    #     # Default position if text length is not 5 or 15
-    #     text_position = (1200, 450)
+    if len(text) <= 5:
+        text_position = (1250, 467)
+    elif len(text) <= 10:
+        text_position = (1200, 467)
+    elif len(text) >= 15:
+        text_position = (1120, 467)
+    else:
+        # Default position if text length is not 5 or 15
+        text_position = (1200, 467)
     
     # Add text to the certificate image
     draw.text(text_position, text, fill="black", font=font)
@@ -52,7 +52,7 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     certificate_img.save(output_path)
 
 def main():
-    st.title("Certificate Creator")
+    st.title("Banner Creator")
     
     # User input for uploading image
     uploaded_image = st.file_uploader("Upload Image", type=["jpg", "jpeg", "png"])
@@ -60,7 +60,7 @@ def main():
     # User input for text
     text = st.text_input("Enter text:")
     
-    if st.button("Generate Certificate"):
+    if st.button("Generate Banner"):
         if uploaded_image:
             # Save the uploaded image temporarily
             temp_image_path = "temp_image.png"
@@ -68,11 +68,18 @@ def main():
                 f.write(uploaded_image.getvalue())
             
             # Call function to add image to the certificate
-            add_image_to_certificate('Certificate.jpg', temp_image_path, text, 'generated_certificate.png')
+            add_image_to_certificate('Certificate.jpg', temp_image_path, text, 'generated_banner.png')
             
             # Display the edited certificate
-            st.image('generated_certificate.png', caption="Generated Certificate", use_column_width=True)
+            st.image('generated_banner.png', caption="Banner Generated", use_column_width=True)
             
+            st.download_button(
+                label="Download Banner",
+                data=open('generated_banner.png', 'rb').read(),
+                file_name='generated_banner.png',
+                mime='image/png'
+            )
+
             # Remove the temporary image file
             os.remove(temp_image_path)
         else:
