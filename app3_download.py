@@ -92,7 +92,7 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     uploaded_img = Image.open(uploaded_image)
     
     # Resize the uploaded image
-    uploaded_img = uploaded_img.resize((480, 443))  # Change dimensions as needed
+    uploaded_img = uploaded_img.resize((380, 365))  # Change dimensions as needed
     
     # Create a round mask
     mask = Image.new("L", uploaded_img.size, 0)
@@ -103,7 +103,7 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     uploaded_img.putalpha(mask)
     
     # Calculate the position to place the uploaded image
-    position = (1090, 30)  # Change position as needed
+    position = (1140, 105)  # Change position as needed
     
     # Paste the uploaded image onto the certificate image
     certificate_img.paste(uploaded_img, position, uploaded_img)
@@ -112,7 +112,7 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     draw = ImageDraw.Draw(certificate_img)
     
     # Custom font style and font size for text
-    font = ImageFont.truetype('arial.ttf', 35)
+    font = ImageFont.truetype('arial.ttf', 32)
     
     # text_position = (1200, 465)
 
