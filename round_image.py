@@ -10,7 +10,7 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     uploaded_img = Image.open(uploaded_image)
     
     # Resize the uploaded image
-    uploaded_img = uploaded_img.resize((380, 365))  # Change dimensions as needed
+    uploaded_img = uploaded_img.resize((360, 330))  # Change dimensions as needed
     
     # Create a round mask
     mask = Image.new("L", uploaded_img.size, 0)
@@ -21,7 +21,7 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     uploaded_img.putalpha(mask)
     
     # Calculate the position to place the uploaded image
-    position = (1140, 105)  # Change position as needed
+    position = (1150, 105)  # Change position as needed
     
     # Paste the uploaded image onto the certificate image
     certificate_img.paste(uploaded_img, position, uploaded_img)
@@ -30,20 +30,20 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     draw = ImageDraw.Draw(certificate_img)
     
     # Custom font style and font size for text
-    font = ImageFont.truetype('arial.ttf', 32)
+    font = ImageFont.truetype('arial.ttf', 38)
     
     # text_position = (1200, 465)
 
     # Calculate the position to place the text
     if len(text) <= 5:
-        text_position = (1250, 470)
+        text_position = (1250, 460)
     elif len(text) <= 10:
-        text_position = (1200, 470)
+        text_position = (1200, 460)
     elif len(text) >= 15:
-        text_position = (1120, 470)
+        text_position = (1120, 460)
     else:
         # Default position if text length is not 5 or 15
-        text_position = (1200, 470)
+        text_position = (1200, 460)
     
     # Add text to the certificate image
     draw.text(text_position, text, fill="black", font=font)
