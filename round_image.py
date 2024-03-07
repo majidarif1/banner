@@ -32,18 +32,25 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     # Custom font style and font size for text
     font = ImageFont.truetype('arial.ttf', 38)
     
-    # text_position = (1200, 465)
+    # text_position = (1110, 460)
 
     # Calculate the position to place the text
     if len(text) <= 5:
-        text_position = (1250, 460)
+        text_position = (1280, 460)
+    elif len(text) <= 9:
+        text_position = (1230, 460)
+    elif len(text) <= 12:
+        text_position = (1210, 460)
+    elif len(text) <= 12:
+        text_position = (1160, 460)
     elif len(text) <= 10:
         text_position = (1200, 460)
-    elif len(text) >= 15:
-        text_position = (1120, 460)
+
     else:
         # Default position if text length is not 5 or 15
-        text_position = (1200, 460)
+        text_position = (1110, 460)
+
+
     
     # Add text to the certificate image
     draw.text(text_position, text, fill="black", font=font)
