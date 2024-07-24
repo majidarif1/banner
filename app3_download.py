@@ -280,7 +280,7 @@ def main():
             
             Event Details: Karachi AI Meetup # 20 : Grand Meetup -  THE NEW MULTIMODAL AND AGENTIC AI
 
-            Date: Saturday, 27th July 2024, 10 AM - 2 PM Sharp
+            Date: Saturday, 27th July 2024, 10 AM - 2 PM Sharp @ IBA Main Campus, University Road, Karachi.
             
             Stay Updated : https://www.facebook.com/groups/karachidotai
             
