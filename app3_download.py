@@ -88,7 +88,7 @@ def main():
             st.divider()
 
             # Display the edited certificate
-            st.image('generated_certificate.png', use_column_width=True)
+            st.image(f'{text}_generated_certificate.png', use_column_width=True)
             
             st.divider()
 
