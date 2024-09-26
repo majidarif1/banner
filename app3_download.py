@@ -64,7 +64,7 @@ def main():
     st.text("")    
     st.text("Sample Output")    
     # Display an image
-    st.image("https://gcdnb.pbrd.co/images/lXEhnUMkBals.jpg", use_column_width=True)
+    st.image("KAI-MEETUP-ATTEND-SHARE.jpg", use_column_width=True)
 
     st.text("")    
     st.text("")    
