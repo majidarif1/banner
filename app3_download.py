@@ -83,7 +83,7 @@ def main():
                 f.write(uploaded_image.getvalue())
             
             # Call function to add image to the certificate
-            add_image_to_certificate('KAI-MEETUP-ATTEND-SHARE.jpg', temp_image_path, text, 'generated_certificate.png')
+            add_image_to_certificate('KAI-MEETUP-ATTEND-SHARE.jpg', temp_image_path, text, f'{text}_generated_certificate.png')
             
             st.divider()
 
@@ -147,8 +147,8 @@ def main():
             # Add download button
             st.download_button(
                 label="Download My Shoutout Banner",
-                data=open('generated_certificate.png', 'rb').read(),
-                file_name='generated_certificate.png',
+                data=open(f'{text}_generated_certificate.png', 'rb').read(),
+                file_name=f'{text}_generated_certificate.png',
                 mime='image/png'
             )
             
