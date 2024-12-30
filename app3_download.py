@@ -238,13 +238,13 @@ def main():
     
     st.text("Generate your banner and share on LinkedIn to build your raport in connections!")
 
-    st.text("")    
-    st.text("Sample Output")    
+    # st.text("")    
+    # st.text("Sample Output")    
     # Display an image
-    st.image("https://gcdnb.pbrd.co/images/lXEhnUMkBals.jpg", use_column_width=True)
+    # st.image("https://gcdnb.pbrd.co/images/lXEhnUMkBals.jpg", use_column_width=True)
 
-    st.text("")    
-    st.text("")    
+    # st.text("")    
+    # st.text("")    
 
     # User input for uploading image
     uploaded_image = st.file_uploader("Please Upload your Headshot Picture with Solid Background", type=["jpg", "jpeg", "png"])
@@ -270,54 +270,54 @@ def main():
             st.divider()
 
             
-            st.markdown(
-            f"""
-            Dear {text},
+            # st.markdown(
+            # f"""
+            # Dear {text},
 
-            We are thrilled to confirm your participation in the highly anticipated event: Karachi AI - Joining Google I/O Extended Karachi 2024 in partnership with GDG Kolachi! 🎉
+            # We are thrilled to confirm your participation in the highly anticipated event: Karachi AI - Joining Google I/O Extended Karachi 2024 in partnership with GDG Kolachi! 🎉
             
-            Please note 100 Certificates will be available on first come first serve basis for Registered Participants, Make sure to get your name noted!
+            # Please note 100 Certificates will be available on first come first serve basis for Registered Participants, Make sure to get your name noted!
             
-            Event Details: Karachi AI Meetup # 20 : Grand Meetup -  THE NEW MULTIMODAL AND AGENTIC AI
+            # Event Details: Karachi AI Meetup # 20 : Grand Meetup -  THE NEW MULTIMODAL AND AGENTIC AI
 
-            Date: Saturday, 27th July 2024, 10 AM - 2 PM Sharp @ IBA Main Campus, University Road, Karachi.
+            # Date: Saturday, 27th July 2024, 10 AM - 2 PM Sharp @ IBA Main Campus, University Road, Karachi.
             
-            Stay Updated : https://www.facebook.com/groups/karachidotai
+            # Stay Updated : https://www.facebook.com/groups/karachidotai
             
-            Best Regards,
-            **Team Karachi AI**
-            """)
+            # Best Regards,
+            # **Team Karachi AI**
+            # """)
             
-            st.divider()
+            # st.divider()
             
-            st.markdown('**Copy Below LinkedIn Post and Share with Professional Network and Facebook Friends**')
+            # st.markdown('**Copy Below LinkedIn Post and Share with Professional Network and Facebook Friends**')
             
-            st.markdown(
-            """
-            🚀 Hey everyone! I'm thrilled to share an extraordinary event: Karachi AI - Joining Google I/O Extended Karachi 2024 in partnership with GDG Kolachi! 🌐✨
+            # st.markdown(
+            # """
+            # 🚀 Hey everyone! I'm thrilled to share an extraordinary event: Karachi AI - Joining Google I/O Extended Karachi 2024 in partnership with GDG Kolachi! 🌐✨
             
-            Event Name : Karachi AI Meetup # 20 : Grand Meetup -  THE NEW MULTIMODAL AND AGENTIC AI
+            # Event Name : Karachi AI Meetup # 20 : Grand Meetup -  THE NEW MULTIMODAL AND AGENTIC AI
 
-            📅 Event Details:
-            - 📍 Location: Institute of Business Administration, Main Campus, Karachi
-            - 🗓️ Date: Saturday, 27th July 2024
-            - 🕐 Time: 10:30 AM - 2:00 PM
+            # 📅 Event Details:
+            # - 📍 Location: Institute of Business Administration, Main Campus, Karachi
+            # - 🗓️ Date: Saturday, 27th July 2024
+            # - 🕐 Time: 10:30 AM - 2:00 PM
 
-            🎯 Theme: THE NEW MULTIMODAL AND AGENTIC AI
+            # 🎯 Theme: THE NEW MULTIMODAL AND AGENTIC AI
 
-            Join us for an incredible journey into the future of artificial intelligence. This Grand Meetup will dive deep into transformative advancements, covering:
+            # Join us for an incredible journey into the future of artificial intelligence. This Grand Meetup will dive deep into transformative advancements, covering:
 
-            Artificial General Intelligence (AGI)
-            Multimodal AI featuring GPT-4o & Google's Project Astra
-            Agentic AI Planning Workflows with MS Co-Pilot & Crew AI
-            🔍 Discover cutting-edge innovations and gain insights from AI experts about AGI's potential and challenges, the integration of various data types for comprehensive AI, and the future of autonomous goal achievement with Agentic AI.
+            # Artificial General Intelligence (AGI)
+            # Multimodal AI featuring GPT-4o & Google's Project Astra
+            # Agentic AI Planning Workflows with MS Co-Pilot & Crew AI
+            # 🔍 Discover cutting-edge innovations and gain insights from AI experts about AGI's potential and challenges, the integration of various data types for comprehensive AI, and the future of autonomous goal achievement with Agentic AI.
 
-            Don't miss out on this opportunity to explore the future of AI! 🚀
+            # Don't miss out on this opportunity to explore the future of AI! 🚀
 
-            👉 Follow me to stay updated and get more details about this groundbreaking event. Let’s embark on this AI journey together! Learn more about Karachi AI - https://www.karachidotai.com/community
-            """)
+            # 👉 Follow me to stay updated and get more details about this groundbreaking event. Let’s embark on this AI journey together! Learn more about Karachi AI - https://www.karachidotai.com/community
+            # """)
             
-            st.divider()
+            # st.divider()
 
             
             # Add download button
