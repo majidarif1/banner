@@ -238,13 +238,13 @@ def main():
     
     st.text("Generate your banner and share on LinkedIn to build your raport in connections!")
 
-    # st.text("")    
-    # st.text("Sample Output")    
+    st.text("")    
+    st.text("Sample Output")    
     # Display an image
-    # st.image("https://gcdnb.pbrd.co/images/lXEhnUMkBals.jpg", use_column_width=True)
+    st.image("KAI-MEETUP-ATTEND-SHARE.jpeg", use_column_width=True)
 
-    # st.text("")    
-    # st.text("")    
+    st.text("")    
+    st.text("")    
 
     # User input for uploading image
     uploaded_image = st.file_uploader("Please Upload your Headshot Picture with Solid Background", type=["jpg", "jpeg", "png"])
