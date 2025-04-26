@@ -80,26 +80,10 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     # Custom font style and font size for text
     font = ImageFont.truetype('arial.ttf', 40)
     
-    # text_position = (1200, 465)
-
-    # Calculate the position to place the text
-    if len(text) <= 5:
-        text_position = (1280, 485)
-    elif len(text) <= 9:        
-        text_position = (1230, 485)
-    elif len(text) <= 12:       
-        text_position = (1210, 485)
-    elif len(text) <= 12:       
-        text_position = (1160, 485)
-    elif len(text) <= 10:       
-        text_position = (1200, 485)
-
-    else:
-        # Default position if text length is not 5 or 15
-        text_position = (1110, 485)
+    text_position = (1230, 485)
     
     # Add text to the certificate image
-    draw.text(text_position, text, fill="black", font=font)
+    draw.text(text_position.ljust(15), text, fill="black", font=font)
     
     # Save the edited image
     certificate_img.save(output_path)
@@ -122,6 +106,8 @@ def main():
     
     # User input for text
     text = st.text_input("Please Enter Full Name (2-3 Words Max) ")
+
+    text = (text[:15])
     
     if st.button("Click Here to Generate Event Confirmation"):
         if uploaded_image:
