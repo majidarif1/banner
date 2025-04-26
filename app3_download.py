@@ -3,15 +3,17 @@ from PIL import Image, ImageDraw, ImageFont
 import os
 
 # Configuration Dictionary for Easy Parametrization
+# FOR COORDINATES USE: https://programminghead.com/Projects/find-coordinates-of-image-online.html
+
 config = {
     'certificate_image': 'KAI-MEETUP-ATTEND-SHARE.jpeg',  # Path to the certificate image
     'font_path': 'arial.ttf',  # Path to the font file
-    'font_size': 40,  # Font size for the text
+    'font_size': 35,  # Font size for the text
     'circle_radius': 140,  # Radius for the circular mask
     'image_resize': (400, 400),  # Resize dimensions for the uploaded image
     'image_position': (1105, 190),  # Position for the uploaded image on the certificate
     'text_position': (1306, 548),  # Position for the text on the certificate
-    'text_max_length': 15  # Maximum number of characters for the text
+    'text_max_length': 20  # Maximum number of characters for the text
 }
 
 confirmation_message = """
