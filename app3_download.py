@@ -103,7 +103,9 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     font = ImageFont.truetype(config['font_path'], config['font_size'])
     
     # Calculate the width and height of the text
-    text_width, text_height = draw.textsize(text, font=font)
+    bbox = draw.textbbox((0, 0), text, font=font)  # Get the bounding box for the text
+    text_width = bbox[2] - bbox[0]  # width is the difference between right and left edges
+    text_height = bbox[3] - bbox[1]  # height is the difference between top and bottom edges
 
     # Calculate the position of the text so that its center aligns with the center_point
     x_position = config['text_position'][0] - text_width // 2
