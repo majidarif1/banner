@@ -13,7 +13,7 @@
 # #     uploaded_img = uploaded_img.resize((400, 400))  # Change dimensions as needed
     
 # #     # Calculate the position to place the uploaded image
-# #     position = (1130, 38)  # Change position as needed
+# #     position = (1302,389)  # Change position as needed
     
 # #     # Paste the uploaded image onto the certificate image
 # #     certificate_img.paste(uploaded_img, position)
@@ -28,12 +28,12 @@
 # #     if len(text) <= 5:
 # #         text_position = (1250, 450)
 # #     elif len(text) <= 10:
-# #         text_position = (1200, 450)
+# #         text_position = (1145,547)
 # #     elif len(text) >= 15:
 # #         text_position = (1120, 450)
 # #     else:
 # #         # Default position if text length is not 5 or 15
-# #         text_position = (1200, 450)
+# #         text_position = (1145,547)
     
 # #     # Add text to the certificate image
 # #     draw.text(text_position, text, fill="black", font=font)
