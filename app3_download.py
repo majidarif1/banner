@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw, ImageFont
 import os
 
 confirmation_message="""
-Dear {text},
+Dear {name},
 
 We are thrilled to confirm your participation in the exciting upcoming event: *Karachi AI Meetup #23: Applied AI in Personalized Healthcare & Sport Analytics / Wellbeing*! 🎉
 
