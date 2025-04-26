@@ -140,7 +140,7 @@ def main():
             
             st.divider()
             
-            st.markdown(confirmation_message.format(name=text)
+            st.markdown(confirmation_message.format(name=text))
 
             st.divider()
 
