@@ -2,21 +2,7 @@ import streamlit as st
 from PIL import Image, ImageDraw, ImageFont
 import os
 
-# Configuration Dictionary for Easy Parametrization
-# USE FOR COORDINATES: https://programminghead.com/Projects/find-coordinates-of-image-online.html
-
-config = {
-    'certificate_image': 'KAI-MEETUP-ATTEND-SHARE.jpeg',  # Path to the certificate image
-    'font_path': 'arial.ttf',  # Path to the font file
-    'font_size': 40,  # Font size for the text
-    'circle_radius': 140,  # Radius for the circular mask
-    'image_resize': (400, 400),  # Resize dimensions for the uploaded image
-    'image_position': (1105, 190),  # Position for the uploaded image on the certificate
-    'text_position': (1306, 548),  # Position for the text on the certificate
-    'text_max_length': 15  # Maximum number of characters for the text
-}
-
-confirmation_message = """
+confirmation_message="""
 Dear {name},
 
 We are thrilled to confirm your participation in the exciting upcoming event: *Karachi AI Meetup #23: Applied AI in Personalized Healthcare & Sport Analytics / Wellbeing*! 🎉
@@ -36,7 +22,7 @@ Best Regards,
 Team Karachi AI
 """
 
-social_share = """
+social_share ="""
 🚀 Exciting News! I'm thrilled to share an extraordinary upcoming event: *Karachi AI Meetup #23: Applied AI in Personalized Healthcare & Sport Analytics / Wellbeing*! 🧠🏥⚽
 
 *📅 Event Details*:  
@@ -64,21 +50,21 @@ Doctors, nurses, pharmacists, radiologists, physiotherapists, athletes, fitness 
 Let’s shape the future of healthcare and wellbeing through AI! 💡 
 """
 
-def add_image_to_certificate(certificate_path, uploaded_image, text, output_path, config):
+def add_image_to_certificate(certificate_path, uploaded_image, text, output_path):
     # Open the certificate image
     certificate_img = Image.open(certificate_path)
     
     # Open the uploaded image
     uploaded_img = Image.open(uploaded_image)
     
-    uploaded_img = uploaded_img.resize(config['image_resize'])  # Resize the uploaded image based on config
+    uploaded_img = uploaded_img.resize((400, 400))  # Change dimensions as needed
     
     # Create a round mask with the same size as the uploaded image
     mask = Image.new("L", uploaded_img.size, 0)  # "L" mode for grayscale (alpha channel mask)
     draw = ImageDraw.Draw(mask)
 
-    # Define the radius (adjust as per the config)
-    radius = config['circle_radius']
+    # Define the radius (adjust as needed)
+    radius = 140  # Smaller radius value to make the circle smaller
 
     # Calculate the bounding box for the ellipse based on the radius
     left = (uploaded_img.size[0] - radius * 2) / 2
@@ -92,8 +78,8 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     # Apply the round mask to the uploaded image (to make the image circular)
     uploaded_img.putalpha(mask)
 
-    # Calculate the position to place the uploaded image on the certificate (from config)
-    center_point_image = config['image_position']
+    # Calculate the position to place the uploaded image on the certificate
+    center_point_image = (1105, 190)  # Change position as needed
     
     # Paste the uploaded image onto the certificate image
     certificate_img.paste(uploaded_img, center_point_image, uploaded_img)
@@ -101,15 +87,17 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     # Create a drawing context
     draw = ImageDraw.Draw(certificate_img)
     
-    # Custom font style and font size for text (from config)
-    font = ImageFont.truetype(config['font_path'], config['font_size'])
+    # Custom font style and font size for text
+    font = ImageFont.truetype('arial.ttf', 40)
     
+    center_point_text = (1306,548)  # This is the center point where we want the text to be centered
+
     # Calculate the width and height of the text
     text_width, text_height = draw.textsize(text, font=font)
 
     # Calculate the position of the text so that its center aligns with the center_point
-    x_position = config['text_position'][0] - text_width // 2
-    y_position = config['text_position'][1] - text_height // 2
+    x_position = center_point_text[0] - text_width // 2
+    y_position = center_point_text[1] - text_height // 2
 
     # Draw the text on the image
     draw.text((x_position, y_position), text, fill="black", font=font)
@@ -120,12 +108,12 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
 def main():
     st.header("Karachi AI - Attendee Shoutout Creator")
     
-    st.text("Generate your banner and share on LinkedIn to build your rapport in connections!")
+    st.text("Generate your banner and share on LinkedIn to build your raport in connections!")
 
     st.text("")    
     st.text("Sample Output")    
     # Display an image
-    st.image(config['certificate_image'], use_column_width=True)
+    st.image("KAI-MEETUP-ATTEND-SHARE.jpeg", use_column_width=True)
 
     st.text("")    
     st.text("")    
@@ -136,7 +124,7 @@ def main():
     # User input for text
     text = st.text_input("Please Enter Full Name (2-3 Words Max) ")
 
-    text = (text[:config['text_max_length']])
+    text = (text[:15])
     
     if st.button("Click Here to Generate Event Confirmation"):
         if uploaded_image:
@@ -146,7 +134,7 @@ def main():
                 f.write(uploaded_image.getvalue())
             
             # Call function to add image to the certificate
-            add_image_to_certificate(config['certificate_image'], temp_image_path, text, 'generated_certificate.png', config)
+            add_image_to_certificate('KAI-MEETUP-ATTEND-SHARE.jpeg', temp_image_path, text, 'generated_certificate.png')
             
             st.divider()
 
