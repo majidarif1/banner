@@ -83,7 +83,7 @@ def add_image_to_certificate(certificate_path, uploaded_image, text, output_path
     text_position = (1230, 485)
     
     # Add text to the certificate image
-    draw.text(text_position.ljust(15), text, fill="black", font=font)
+    draw.text(text_position, text.ljust(15), fill="black", font=font)
     
     # Save the edited image
     certificate_img.save(output_path)
