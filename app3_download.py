@@ -274,19 +274,19 @@ def main():
             f"""
             Dear {text},
 
-            We are thrilled to confirm your participation in the exciting upcoming event: *Karachi AI Meetup # 22: AI in E-Commerce and Digital Marketing*! 🎉
-
+            We are thrilled to confirm your participation in the exciting upcoming event: *Karachi AI Meetup #23: Applied AI in Personalized Healthcare & Sport Analytics / Wellbeing*! 🎉
+            
             Please note that *100 Certificates* will be available on a first-come, first-serve basis for registered participants. Make sure to get your name noted!
-
+            
             *Event Details*:
-            - *Date:* Saturday, 11th January 2025  
-            - *Time:* 2:00 PM - 6:00 PM Sharp  
-            - *Venue:* DHA Innovista Indus, Sunset Boulevard, Phase II Ext, Karachi    
-
+            - *Date:* Saturday, 17th May 2025  
+            - *Time:* 1:00 PM - 6:00 PM Sharp  
+            - *Venue:* Ziauddin University, Clifton, Karachi    
+            
             *Registration Link:* [Register here](https://www.karachidotai.com/community#meetups)
-
+            
             Stay updated: [Follow us on Facebook](https://www.facebook.com/groups/karachidotai)
-
+            
             Best Regards,  
             Team Karachi AI
             """
@@ -298,27 +298,31 @@ def main():
 
             st.markdown(
                 """
-                🚀 Exciting News! I'm thrilled to share an extraordinary upcoming event: *Karachi AI Meetup # 22: AI in E-Commerce and Digital Marketing*! 🌐✨  
+                🚀 Exciting News! I'm thrilled to share an extraordinary upcoming event: *Karachi AI Meetup #23: Applied AI in Personalized Healthcare & Sport Analytics / Wellbeing*! 🧠🏥⚽
 
                 *📅 Event Details*:  
-                - *📍 Venue:* DHA Innovista Indus, Sunset Boulevard, Phase II Ext, Karachi  
-                - *🗓️ Date:* Saturday, 11th January 2025  
-                - *🕐 Time:* 2:00 PM - 6:00 PM  
-
-                🎯 *Theme:* AI in E-Commerce and Digital Marketing  
-
-                Join us to explore how AI is transforming the e-commerce and marketing landscapes. This meetup will dive deep into:  
-                - *AI-Powered Product Sourcing & Dropshipping*  
-                - *Generative AI for Product Photography & AR Displays*  
-                - *The TikTok Shop Revolution in Video Commerce*  
-                - *AI-Optimized Ads, SEO, and Lead Generation*  
-                - *AI-Driven Websites and Content Automation*  
-
-                🔍 Discover cutting-edge innovations, learn from experts, and network with professionals from the industry.  
-
-                *👉 Registration Deadline:* 04th January 2025. Don't miss out! [Register now](https://www.karachidotai.com/community#meetups).  
-
-                Let's embark on this journey into the future of AI together! 🚀  
+                - *📍 Venue:* Ziauddin University, Clifton, Karachi  
+                - *🗓️ Date:* Saturday, 17th May 2025  
+                - *🕐 Time:* 1:00 PM - 6:00 PM  
+                
+                🎯 *Theme:* AI in Personalized Healthcare & Sport Analytics  
+                
+                Join us to explore how AI is revolutionizing health, medicine, and athletic performance. This meetup will dive deep into:  
+                - *AI-Driven Personalized Treatment Planning*  
+                - *Generative AI in Medical Imaging*  
+                - *Virtual Health Assistants & Chatbots*  
+                - *AI-Powered Athlete Performance Analysis*  
+                - *Injury Prevention & Recovery using AI*  
+                - *Wearable Tech for Fitness & Wellbeing*
+                
+                👩‍⚕️ *Who Should Attend?*  
+                Doctors, nurses, pharmacists, radiologists, physiotherapists, athletes, fitness professionals, sports enthusiasts, and curious minds — **students and professionals welcome!**
+                
+                🧠 No tech background required. Just curiosity and a passion for innovation!
+                
+                👉 *Registration Deadline:* Register now to secure your spot: [karachidotai.com/community#meetups](https://www.karachidotai.com/community#meetups)  
+                
+                Let’s shape the future of healthcare and wellbeing through AI! 💡 
                 """
             )
 
